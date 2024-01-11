@@ -17,7 +17,9 @@ done <<< $DISK_USAGE
 
 echo -e "Message: $message"
 
-echo "$message" | mail -s "High Disk Usage" sridharreddy2508@gmail.com 
+#echo "$message" | mail -s "High Disk Usage" sridharreddy2508@gmail.com 
+
+sh mail.sh "Devops Team" "High Disk Usage" "$message" "sridharreddy2508@gmail.com" "ALERT High Disk  Usage"
 
 #Message: High Disk Usage on /dev/xvdf: 2 --> this is the output came before addding + in 13 line
 #after adding + symbol, it will overwrite 2nd time loop and output is Message: High Disk Usage on /dev/xvda1: 30High Disk Usage on /dev/xvdf: 2
