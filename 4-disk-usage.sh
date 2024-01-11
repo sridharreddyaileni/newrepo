@@ -10,9 +10,12 @@ do
     partition=$(echo $line | awk '{print $1F}')
     if [ $usage -ge $DISK_THRESHOLD ]
     then
-        message="High Disk Usage on $partition: $usage"
+        message+="High Disk Usage on $partition: $usage"
     fi
 
 done <<< $DISK_USAGE
 
 echo "Message: $message"
+
+#Message: High Disk Usage on /dev/xvdf: 2 --> this is the output came before addding + in 13 line
+#after adding + symbol, it will overwrite 2nd time loop
