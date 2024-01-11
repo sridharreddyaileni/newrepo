@@ -16,6 +16,6 @@ FILES_TO_DELETE=$(find . -type f -mtime +15 -name "*.log")
 
 while IFS= read -r line
 do
-    echo "Deleting file:$line"
+    echo "Deleting file: $line"
 done <<< $FILES_TO_DELETE
 
