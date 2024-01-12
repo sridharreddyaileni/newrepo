@@ -30,6 +30,7 @@ done
 if [ -z "$NAME" ]; then #now wishes is optional
     #echo "ERROR: Both -n and -w are mandatory options."
     echo "ERROR: -n is mandatory,"
+    echo "ERROR: -w is mandatory,"
     USAGE
     exit 1
 fi
